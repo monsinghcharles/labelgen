@@ -1,0 +1,26 @@
+<html>
+    <head>
+        {% load static %}
+        <title>
+            Excel file upload and processing : Django Example : ThePythonDjango.Com
+        </title>
+        <h1>QR Label Bot 2.2</h1>
+    </head>
+    <body style="margin-top: 30px;margin-left: 30px;">
+        <form action="{% url "indix:index" %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file"
+                   title="Upload excel file"
+                   name="excel_file"
+                   style="border: 1px solid black; padding: 5px;"
+                   required="required">
+            <p>
+            <input type="submit"
+                   value="upload"
+                   style="border: 1px solid green; padding:5px; border-radius: 2px; cursor: pointer;">
+        </form>
+
+        <p></p>
+
+    </body>
+</html>

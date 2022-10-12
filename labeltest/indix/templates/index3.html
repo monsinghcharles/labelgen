@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'qrlabel/style.css' %}">
+    <script src="{% static 'qrlabel/script.js' %}"></script>
+</head>
+
+<body>
+    <div class="header">
+        <img class="nav" src="{% static 'Logo.png' %}" alt="upload">
+        <h1 class="name">QR LABEL BOT2.2</h1>
+    </div>
+
+    <form>
+        <div class="form">
+            <input name="file" id="entry_value" ref="fileInput" type="file" onchange="getFileName()">
+            <div>
+                <img src="{% static 'qrlabel/upload.png' %}" alt="upload" width="7%" class="mx-2">
+                Upload your files here or
+                <button class="btn bg-color-dblue btn-primary px-4 py-3">Browse</button>
+            </div>
+                   <span id="fileName" class="text-primary "></span>
+            <div class="buttons">
+                <button class="btn bg-color-dblue btn-primary px-4 py-3">Upload</button>
+                
+                <button class="btn bg-color-dblue btn-primary px-4 py-3">Download PDF</button>
+            </div>
+        </div>    
+    </form>
+
+
+</body>
+
+</html>
